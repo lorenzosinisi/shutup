@@ -1,38 +1,55 @@
 # Shutup
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/shutup`. To experiment with that code, run `bin/console` for an interactive prompt.
+If you find yourself in this situation (A server is already running) often:
 
-TODO: Delete this and the text above, and describe your gem
+```
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+A server is already running. Check /tmp/pids/server.pid.
+Exiting
+```
+
+What you do includes, for instance, killing the process by its process id:
+
+```
+cat /tmp/pids/server.pid
+kill -9 PID
+```
+
+But this is boring. And you have to do it all the times. This gems creates a shortcut to fix the 'A server is already running' problem when dealing with Rails.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'shutup'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Go in the root folder of your Rails project:
 
     $ gem install shutup
 
+
 ## Usage
 
-TODO: Write usage instructions here
+After installing the gem run:
+
+    $ shutup
+
+NOTE: try to start the Rails app, open a new terminal window and then type:
+
+    $ shutup
+
+To see how this gem kills the current process.
 
 ## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/shutup.
+Bug reports and pull requests are welcome on GitHub at https://github.com/lorenzosinisi/shutup.
+
+## Todo
+
+1. Write tests
+2. Kill other type of apps (Node, PHP, Scala)
+3. Improve the error messages and error handling
 
 
 ## License

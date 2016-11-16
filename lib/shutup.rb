@@ -1,9 +1,8 @@
 require "shutup/version"
-
 module Shutup
   class Rails
     def current_dir
-      File.expand_path(File.dirname(__FILE__))
+      File.expand_path(File.dirname(File.dirname('.')))
     end
 
     def pid_file
@@ -23,8 +22,6 @@ module Shutup
       if pid
         system "kill -9 #{pid}"
         puts "Killed process id: #{pid}"
-      else
-        "File #{pid_file} does not exist, unable to find Rails process"
       end
     end
   end
