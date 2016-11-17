@@ -20,10 +20,13 @@ But this is boring. And you have to do it all the times. This gems creates a sho
 
 ## Installation
 
-Go in the root folder of your Rails project:
-
     $ cd PROJECT_ROOT_FOLDER
     $ gem install shutup
+
+## Installation (if using rvm)
+
+    $ cd PROJECT_ROOT_FOLDER
+    $ rvm @global do gem install shutup
 
 
 ## Usage
