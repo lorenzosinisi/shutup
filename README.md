@@ -22,6 +22,7 @@ But this is boring. And you have to do it all the times. This gems creates a sho
 
 Go in the root folder of your Rails project:
 
+    $ cd PROJECT_ROOT_FOLDER
     $ gem install shutup
 
 
@@ -29,9 +30,10 @@ Go in the root folder of your Rails project:
 
 After installing the gem run:
 
+    $ cd PROJECT_ROOT_FOLDER
     $ shutup
 
-NOTE: try to start the Rails app, open a new terminal window and then type:
+TEST IT: try to start the Rails app, open a new terminal window and then type:
 
     $ shutup
 
