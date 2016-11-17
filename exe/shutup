@@ -5,4 +5,6 @@ require 'shutup'
 puts "Killing the process..."
 
 rails_killer = Shutup::Rails.new
-rails_killer.hit!
+if rails_killer.hit!
+  rails_killer.delete_pid
+end

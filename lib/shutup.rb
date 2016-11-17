@@ -22,7 +22,12 @@ module Shutup
       if pid
         system "kill -9 #{pid}"
         puts "Killed process id: #{pid}"
+        true
       end
+    end
+
+    def delete_pid
+      File.delete(pid_file) if File.exist?(pid_file)
     end
   end
 end
