@@ -2,9 +2,7 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'shutup'
-puts "Killing the process..."
 
-rails_killer = Shutup::Rails.new
-if rails_killer.hit!
-  rails_killer.delete_pid
-end
+puts "Killing the process."
+
+Shutup::Rails.hit! && Shutup::Rails.delete_pid
