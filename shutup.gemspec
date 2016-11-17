@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = "shutup"
   spec.version       = Shutup::VERSION
   spec.authors       = ["Lorenzo Sinisi"]
-  spec.email         = ["lasslo.net@gmail.com"]
+  spec.email         = ["info@lorenzosinisi.com"]
 
   spec.summary       = %q{Kill the Rails process running in the current folder}
   spec.description   = %q{Kill the Rails process running in the current folder}
-  spec.homepage      = "http://lorenzosinisi.com"
+  spec.homepage      = "https://github.com/lorenzosinisi/shutup"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
