@@ -5,4 +5,4 @@ require 'shutup'
 
 puts "Killing the process."
 
-Shutup::Rails.hit! && Shutup::Rails.delete_pid
+Shutup.process(name: :server)
