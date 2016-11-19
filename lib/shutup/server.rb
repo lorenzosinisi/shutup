@@ -13,8 +13,8 @@ module Shutup
         begin
           File.read(pid_file)
         rescue => e
-          e.message << ' Are you sure that the process is running?'
-          raise(e)
+          puts "Error reading the pid file."
+          system "cat #{pid_file}"
         end
       end
 

@@ -5,8 +5,11 @@ module Shutup
   ALLOWED_SERVICES = %i(server)
 
   def self.process(name:)
-    done = ALLOWED_SERVICES.include?(name) && send(name)
-    done || puts("#{name.to_s} not supported.")
+    if ALLOWED_SERVICES.include?(name)
+      send(name)
+    else
+      puts "#{name.to_s}.pid not yet supported"
+    end
   end
 
   def self.server
