@@ -2,10 +2,11 @@ require "shutup/version"
 require "shutup/server"
 
 module Shutup
-  ALLOWED_SERVICES = %w(server)
+  ALLOWED_SERVICES = %i(server)
 
   def self.process(name:)
-    ALLOWED_SERVICES.include?(name) && send(name)
+    done = ALLOWED_SERVICES.include?(name) && send(name)
+    done || puts("#{name.to_s} not supported.")
   end
 
   def self.server
